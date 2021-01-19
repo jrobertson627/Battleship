@@ -6,6 +6,11 @@ namespace BattleShip
     {
         static void Main(string[] args)
         {
+
+            //Objects to Create:
+                //Map
+                //Player
+                //Game
             Console.WriteLine("We're going to code a game of battleship!");
             //Function to create a blank field (8x8)
             //Function to allow the user to pick where they want to go

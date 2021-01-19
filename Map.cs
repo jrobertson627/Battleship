@@ -4,7 +4,7 @@ public class Map
 {
 	public Map()
 	{
-		createBlankMap();
+		CreateBlankMap();
 	}
 
 	
@@ -13,6 +13,18 @@ public class Map
     {
 		//create the 0-7 line up top
 		//create the A-H line and follow with *
+    }
+
+	//allow the user to create a new map
+	public void CreateNewMap()
+    {
+
+    }
+
+	//create a random map
+	public void CreateRandomMap()
+    {
+
     }
 
 	//map getter
