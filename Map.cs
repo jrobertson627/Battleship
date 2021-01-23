@@ -102,6 +102,12 @@ public class Map
 		return Board[x][y].Ship != null;
 	}
 
+	public bool IsHit(int x, int y)
+	{
+		AssertBounds(x, y);
+		return Board[x][y].IsHit;
+	}
+
 	/// <summary>
 	/// Places a ship on the gameboard
 	/// </summary>
@@ -131,7 +137,14 @@ public class Map
 
 	public void Attack(int positionX, int positionY, Weapon w)
 	{
-		// Attack needs to see if the weapon does any damage
+		AssertBounds(positionX, positionY);
+
+		if (Board[positionX][positionY].IsHit)
+			return;
+		Board[positionX][positionY].IsHit = true;
+		var ship = Board[positionX][positionY].Ship;
+		if(ship != null)
+			ship.Hit();
 
 	}
 

@@ -11,6 +11,16 @@ namespace BattleShip
         {
             Width = width;
             Height = height;
+            Health = width * height;
+        }
+
+        public bool IsAlive()
+        {
+            return Health > 0;
+        }
+        public void Hit()
+        {
+            Health -= 1;
         }
         public int Width { get; }
         public int Height { get; }
